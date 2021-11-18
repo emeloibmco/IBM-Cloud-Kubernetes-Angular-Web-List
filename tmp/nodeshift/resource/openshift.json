@@ -1,0 +1,138 @@
+{
+  "apiVersion": "v1",
+  "kind": "List",
+  "items": [
+    {
+      "apiVersion": "apps.openshift.io/v1",
+      "kind": "DeploymentConfig",
+      "metadata": {
+        "name": "listas",
+        "namespace": "default",
+        "labels": {
+          "project": "listas",
+          "version": "0.0.0",
+          "provider": "nodeshift",
+          "app": "listas",
+          "app.kubernetes.io/name": "nodejs",
+          "app.kubernetes.io/component": "listas",
+          "app.kubernetes.io/instance": "listas",
+          "app.openshift.io/runtime": "nodejs"
+        }
+      },
+      "spec": {
+        "replicas": 1,
+        "revisionHistoryLimit": 2,
+        "selector": {
+          "app": "listas",
+          "project": "listas",
+          "provider": "nodeshift"
+        },
+        "triggers": [
+          {
+            "type": "ConfigChange"
+          },
+          {
+            "type": "ImageChange",
+            "imageChangeParams": {
+              "automatic": true,
+              "containerNames": [
+                "listas"
+              ],
+              "from": {
+                "kind": "ImageStreamTag",
+                "namespace": "default",
+                "name": "listas:latest"
+              }
+            }
+          }
+        ],
+        "template": {
+          "metadata": {
+            "labels": {
+              "project": "listas",
+              "version": "0.0.0",
+              "provider": "nodeshift",
+              "app": "listas"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "image": "listas",
+                "name": "listas",
+                "securityContext": {
+                  "privileged": false
+                },
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http",
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "spec": {
+        "selector": {
+          "project": "listas",
+          "provider": "nodeshift"
+        },
+        "ports": [
+          {
+            "protocol": "TCP",
+            "port": 8080,
+            "targetPort": 8080,
+            "name": "http"
+          }
+        ],
+        "type": "ClusterIP"
+      },
+      "metadata": {
+        "name": "listas",
+        "namespace": "default",
+        "labels": {
+          "project": "listas",
+          "version": "0.0.0",
+          "provider": "nodeshift",
+          "app.kubernetes.io/name": "nodejs",
+          "app.kubernetes.io/component": "listas",
+          "app.kubernetes.io/instance": "listas",
+          "app.openshift.io/runtime": "nodejs"
+        }
+      }
+    },
+    {
+      "apiVersion": "route.openshift.io/v1",
+      "kind": "Route",
+      "spec": {
+        "to": {
+          "kind": "Service",
+          "name": "listas"
+        },
+        "port": {
+          "targetPort": 8080
+        }
+      },
+      "metadata": {
+        "name": "listas",
+        "labels": {
+          "project": "listas",
+          "version": "0.0.0",
+          "provider": "nodeshift",
+          "app.kubernetes.io/name": "nodejs",
+          "app.kubernetes.io/component": "listas",
+          "app.kubernetes.io/instance": "listas",
+          "app.openshift.io/runtime": "nodejs"
+        }
+      }
+    }
+  ]
+}
