@@ -34,8 +34,6 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 
 5. Para finalizar la creación de su clúster de click en el botón ```Create/Crear```. Cuando el clúster tengo como estado ```normal```, podrá utilizarlo.
 
-   <br />
-
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/CrearCluster.gif"></p>
 
    <br />
@@ -70,15 +68,11 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
    git --version   
    ```
    
-   Como respuesta, debe obtener la versión de git.
+   Como respuesta debe obtener la versión de git.
    
-   <br />
-
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Git.gif"></p>
 
    <br />
-
-<br />
 
 ## Instalación de Docker
 Para crear la imágen docker local de la aplicación y probarla, es necesario que instale *Docker Desktop*. Para ello, complete los siguientes pasos:
@@ -88,7 +82,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 
 2. Espere unos minutos mientras se completa la descarga, y luego de click sobre el instalador.
 
-3. Hbailite la 2 casillas que aparecen y de click en el botón ```Ok```. Espere unos minutos mientras se completa la instalación.
+3. Habilite la 2 casillas que aparecen y de click en el botón ```Ok```. Espere unos minutos mientras se completa la instalación.
 
 4. Una vez finalice la instalación, en la barra de búsqueda coloque ```Docker Desktop``` y abra la aplicación. Espere unos minutos mientras esta inicia.
 
@@ -97,7 +91,10 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
    <br />
 
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Docker.gif"></p>
-
+  
+   <br />
+   
+   > NOTA: En caso de presentar problema en Windows sobre *Enable Hyper-V Windows Features*, revise la guía <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v"> Enable Hyper-V using PowerShell</a>
   
 6. Una vez complete la instalación, en un ventana de ```Windows PowerShell``` coloque:
 
@@ -105,7 +102,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
    docker version   
    ```
    
-   Como respuesta, debe obtener la versión de docker.
+   Como respuesta debe obtener la versión de docker.
    
    <br />
 
