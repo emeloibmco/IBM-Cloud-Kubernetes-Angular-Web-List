@@ -27,9 +27,9 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 
 4. Complete los detalles del plan de la siguiente manera:
 
-   * ```Princing plan/Plan de precios```: selccione la opción **Free**.
+   * ```Princing plan/Plan de precios```: seleccione la opción **Free**.
    * ```Cluster name/Nombre del clúster```: indique un nombre exclusivo para su clúster.
-   * ```Resource group/Grupo de recursos```: selccione el grupo de recursos **Default** que aparece por defecto.
+   * ```Resource group/Grupo de recursos```: seleccione el grupo de recursos **Default** que aparece por defecto.
 
 5. Para finalizar la creación de su clúster de click en el botón ```Create/Crear```. Cuando el clúster tengo como estado ```normal```, podrá utilizarlo.
 
@@ -39,11 +39,28 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 
    <br />
 
-> NOTA: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomiendo seguir con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), de tal modo que una vez tenga el clúster listo y los comandos reueridos, pueda seguir con el procedimiento.
+> NOTA: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomiendo continuar con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), de tal modo que una vez tenga el clúster listo y los comandos requeridos, pueda avanzar en el ejercicio.
 
 <br />
 
 ## Instalar herramientas y comandos necesarios :gear:
+Para desplegar la aplicación propuesta en un clúster de Kubernetes en IBM Cloud, deberá contar con una serie de comandos y herramientas que le permitirán completar el proceso con éxito. A continuación, se indican los pasos para realizar la instalación en Windows. En caso de que trabaje con un sistema operativo diferente, se indican los enlaces para que revise el proceso.
+<br />
+
+### Instalación del comando git
+Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicación, es necesario contar con el comando git. Complete los siguientes pasos:
+
+1. Verifique si tiene instalado el comando. Para ello, abra una ventana de ```Windows PowerShell``` y allí coloque:
+
+   ```
+   git --version``
+   
+   ```
+   
+   Si obtiene como respuesta la versión dle comando, puede pasar a la siguiente herramientas necesario. De lo contrario, continúe con el paso 2.
+
+2. 
+
 <br />
 
 ## Clonar repositorio :round_pushpin:
