@@ -48,7 +48,7 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 Para desplegar la aplicación propuesta en un clúster de Kubernetes en IBM Cloud, deberá contar con una serie de comandos y herramientas que le permitirán completar el proceso con éxito. A continuación, se indican los pasos para realizar la instalación en Windows. En caso de que trabaje con un sistema operativo diferente, se indican los enlaces para que revise el proceso.
 <br />
 
-### Instalación de git
+### * Instalación de git
 Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicación, es necesario contar con el comando git. Complete los siguientes pasos:
 <br />
 
@@ -58,7 +58,7 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
    git --version   
    ```
    
-   Si obtiene como respuesta la versión de git, puede pasar a la siguiente sección sobre la [Instalación de Docker](#Instalación-de-Docker). De lo contrario, continúe con el paso 2.
+   Si obtiene como respuesta la versión de git, puede pasar a la siguiente sección sobre la [* Instalación de Docker](#*-Instalación-de-Docker). De lo contrario, continúe con el paso 2.
 
 2. Para instalar git en su computador, vaya a la página de <a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git"> Instalación de Git</a>. Identifique el sistema operativo en el que desea realizar la instalación y complete el proceso indicado. Para el caso de Windows, de click sobre el enlace <a href="http://git-scm.com/download/win"> http://git-scm.com/download/win</a>, y allí seleccione la opción ```Click here to download manually```. 
 
@@ -80,7 +80,7 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
 
 <br />
 
-## Instalación de Docker
+## * Instalación de Docker
 <br />
 
 ## Clonar repositorio :round_pushpin:
