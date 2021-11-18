@@ -222,8 +222,8 @@ Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice l
    >**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
 
    ```PowerShell
-    kubectl expose deployment/<deployment> --type=NodePort --port=8080
-  ```
+   kubectl expose deployment/<deployment> --type=NodePort --port=8080
+   ```
 
    >**NOTA 2**: Si esta trabajando con VPC (Load Balancer) ejecute el siguiente comando:
    
