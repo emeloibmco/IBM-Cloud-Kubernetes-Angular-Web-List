@@ -118,15 +118,141 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
 <br />
 
 ## Crear imagen docker local de la aplicación :computer:
+Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile* utilizado para crear la imagen de la aplicación. Realice los siguientes pasos:
+<br />
+
+1. En la ventaja de *Windows PowerShell* y asegurándose que se encuentra dentro de la carpeta que contiene los archivos de la aplicación y el Dockerfile, coloque el siguiente comando para crear la imagen de su aplicación:
+
+   ```PowerShell
+   docker build -t <nombre_imagen:tag> .
+   ```
+
+2. Una vez finalice el proceso, verifique en *Docker Desktop* que la imagen que acaba de crear aparece en la lista de imágenes.
+
+3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y nombre_imagen:tag):
+  
+   ```PowerShell
+   docker run --publish port:port_dockerfile <nombre_imagen:tag>
+   ```
+   
+   y coloque en el navegador:
+ 
+   ```PowerShell
+   localhost:port
+   ```
+
+> Nota: En la variable port puede colocar cualquier valor, por ejemplo 8085. En la variable port_dockerfile por defecto coloque 8080, ya que es el puerto establecido para este ejercicio.
+
 <br />
 
 ## Subir imagen de la aplicación a IBM Cloud Container Registry :outbox_tray:
+Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
+<br />
+
+1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos, inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+
+   ```PowerShell
+   ibmcloud login --sso
+   ```
+
+2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+
+3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
+
+   ```PowerShell
+   ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
+   ```
+   >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información.
+
+4. Registre el daemon de Docker local en *IBM Cloud Container Registry* con el comando:
+
+   ```PowerShell
+   ibmcloud cr login
+   ```
+
+5. Cree un espacio de nombres (*namespace*) dentro de *IBM Cloud Container Registry* para su imagen. Para ello ejecute el siguiente comando:
+
+   ```PowerShell
+   ibmcloud cr namespace-add <namespace>
+   ```
+   
+   >**Nota**: Reemplace \<namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación. 
+
+6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*) creado en el ítem anterior. Coloque el siguiente comando:
+
+   ```PowerShell
+   docker tag <nombre_imagen:tag> us.icr.io/<namespace>/<nombre_imagen:tag>
+   ```
+   
+   >**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
+
+7. Envíe la imagen a *IBM Cloud Container Registry* mediante el comando:
+
+   ```PowerShell
+   docker push us.icr.io/<namespace>/<nombre_imagen:tag>
+   ```
+
+8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
 <br />
 
 ## Desplegar imagen de la aplicación en Kubernetes :rocket:
+Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice lo siguiente:
+<br />
+
+1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
+
+   ```PowerShell
+   ibmcloud cs clusters
+   ```
+
+2. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando kubectl de la siguiente manera:
+
+   ```PowerShell
+   ibmcloud ks cluster config --cluster <cluster_name>
+   ```
+
+3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar \<deployment> con un nombre para su servicio de despliegue):  
+
+   ```PowerShell
+   kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
+   ```
+  
+4. A continuación, debe exponer su servicio en Kubernetes, para ello realice lo siguiente.
+
+   >**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
+
+   ```PowerShell
+    kubectl expose deployment/<deployment> --type=NodePort --port=8080
+  ```
+
+   >**NOTA 2**: Si esta trabajando con VPC (Load Balancer) ejecute el siguiente comando:
+   
+   ```PowerShell
+   kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080
+   ```
+   
+   En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
+
+
+5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
+
 <br />
 
 ## Verificar el funcionamiento de la aplicación :heavy_check_mark:
+Para verificar el correcto funcionamiento de su aplicación en Kubernetes realice lo siguiente:
+
+1. Su aplicación funcionará si coloca en el navegador **IP_Publica:port**. Para obtener la IP Pública coloque el comando:
+
+   ```PowerShell
+   ibmcloud ks workers --cluster <ID_Cluster>
+   ```
+
+   Para obtener el puerto use el comando:
+
+   ```PowerShell
+   kubectl get service <deployment>
+   ```
+
 <br />
 
 ## Referencias :mag:
