@@ -88,8 +88,6 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 
 5. Si no tiene una cuenta en <a href="https://hub.docker.com/"> DockerHub</a>, cree una y luego coloque las credenciales de inicio de sesión presionando ```Sign in``` en la parte superior derecha de la ventana de ```Docker Desktop```.
 
-   <br />
-
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Docker.gif"></p>
   
    <br />
@@ -104,8 +102,6 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
    
    Como respuesta debe obtener la versión de docker.
    
-   <br />
-
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Prueba%20Docker.gif"></p>
 
    <br />
