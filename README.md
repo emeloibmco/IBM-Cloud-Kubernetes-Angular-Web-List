@@ -217,23 +217,12 @@ Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice l
    kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
    ```
   
-4. A continuación, debe exponer su servicio en Kubernetes, para ello realice lo siguiente.
-
-   >**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
+4. A continuación, debe exponer su servicio en Kubernetes, para ello utilice el siguiente comando:
 
    ```PowerShell
    kubectl expose deployment/<deployment> --type=NodePort --port=8080
    ```
-
-   >**NOTA 2**: Si esta trabajando con VPC (Load Balancer) ejecute el siguiente comando:
    
-   ```PowerShell
-   kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080
-   ```
-   
-   En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
-
-
 5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
 
 <br />
