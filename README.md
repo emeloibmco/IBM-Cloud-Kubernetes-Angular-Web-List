@@ -18,6 +18,7 @@
 
 ## Crear clúster Kubernetes :cloud:
 Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el presente repositorio, complete los siguientes pasos:
+<br />
 
 1. Inicie sesión con su usuario y contraseña en el portal de <a href="https://cloud.ibm.com/"> IBM Cloud</a>.
 
@@ -47,21 +48,33 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 Para desplegar la aplicación propuesta en un clúster de Kubernetes en IBM Cloud, deberá contar con una serie de comandos y herramientas que le permitirán completar el proceso con éxito. A continuación, se indican los pasos para realizar la instalación en Windows. En caso de que trabaje con un sistema operativo diferente, se indican los enlaces para que revise el proceso.
 <br />
 
-### Instalación del comando git
+### Instalación de git
 Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicación, es necesario contar con el comando git. Complete los siguientes pasos:
+<br />
 
 1. Verifique si tiene instalado el comando. Para ello, abra una ventana de ```Windows PowerShell``` y allí coloque:
 
+   ```PowerShell
+   git --version   
    ```
-   git --version``
    
-   ```
-   
-   Si obtiene como respuesta la versión dle comando, puede pasar a la siguiente herramientas necesario. De lo contrario, continúe con el paso 2.
+   Si obtiene como respuesta la versión de git, puede pasar a la siguiente sección sobre la [Instalación de Docker](#Instalación-de-Docker). De lo contrario, continúe con el paso 2.
 
-2. 
+2. Para instalar git en su computador, vaya a la página de <a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git"> Instalación de Git</a>. Identifique el sistema operativo en el que desea realizar la instalación y complete el proceso indicado. Para el caso de Windows, de click sobre el enlace <a href="http://git-scm.com/download/win"> http://git-scm.com/download/win</a>, y allí seleccione la opción ```Click here to download manually```. 
+
+3. Espere mientras se completa la descarga y posteriormente, de click en el instalador. Complete la instalación, dejando todos los campos como aparecen por defecto y al final de click en el botón ```Install```.
+
+4. Para verificar que la instalación de git se ha completado con éxito, en una ventana de ```Windows PowerShell``` coloque:
+
+   ```PowerShell
+   git --version   
+   ```
+   
+   Como respuesta, debe obtener la versión de git.
 
 <br />
+
+## Instalación de Docker
 
 ## Clonar repositorio :round_pushpin:
 <br />
