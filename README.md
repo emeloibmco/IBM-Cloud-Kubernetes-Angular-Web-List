@@ -47,7 +47,7 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 Para desplegar la aplicación propuesta en un clúster de Kubernetes en IBM Cloud, deberá contar con una serie de comandos y herramientas que le permitirán completar el proceso con éxito. A continuación, se indican los pasos para realizar la instalación en Windows. En caso de que trabaje con un sistema operativo diferente, se indican los enlaces para que revise el proceso.
 <br />
 
-### Instalación de git
+## Instalación de git
 Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicación, es necesario contar con el comando git. Complete los siguientes pasos para realizar realizar la instalación:
 <br />
 
@@ -107,7 +107,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 
    <br />
    
-### Instalar IBM Cloud CLI y plug-ins
+## Instalación de IBM Cloud CLI y plug-ins
 Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá instalar en su computador la CLI de IBM Cloud junto con algunos plug-ins. Para completar estas instalaciones realice lo siguiente:
 <br />
 
