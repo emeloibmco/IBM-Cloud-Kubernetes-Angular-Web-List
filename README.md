@@ -71,10 +71,17 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
    ```
    
    Como respuesta, debe obtener la versión de git.
+   
+   <br />
+
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Git.gif"></p>
+
+   <br />
 
 <br />
 
 ## Instalación de Docker
+<br />
 
 ## Clonar repositorio :round_pushpin:
 <br />
