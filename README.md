@@ -6,10 +6,11 @@
 3. [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear)
 4. [Clonar repositorio](#Clonar-repositorio-round_pushpin)
 5. [Crear imagen docker local de la aplicación](#Crear-imagen-docker-local-de-la-aplicación-computer)
-6. [Desplegar aplicación en Kubernetes](#Desplegar-aplicación-en-Kubernetes-rocket)
-7. [Verificar el funcionamiento de la aplicación](#Verificar-el-funcionamiento-de-la-aplicación-heavy_check_mark)
-8. [Referencias](#Referencias-mag)
-9. [Autores](#Autores-black_nib)
+6. [Subir imagen de la aplicación a IBM Cloud Container Registry](#Subir-imagen-de-la-aplicación-a-IBM-Cloud-Container-Registry-outbox_tray)
+7. [Desplegar imagen de la aplicación en Kubernetes](#Desplegar-imagen-de-la-aplicación-en-Kubernetes-rocket)
+8. [Verificar el funcionamiento de la aplicación](#Verificar-el-funcionamiento-de-la-aplicación-heavy_check_mark)
+9. [Referencias](#Referencias-mag)
+10. [Autores](#Autores-black_nib)
 <br />
 
 ## Pre-Requisitos :pencil:
@@ -97,7 +98,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 6. Una vez complete la instalación, en un ventana de ```Windows PowerShell``` coloque:
 
    ```PowerShell
-   docker version   
+   docker --version   
    ```
    
    Como respuesta debe obtener la versión de docker.
@@ -107,6 +108,10 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
    <br />
    
 ### Instalar IBM Cloud CLI y plug-ins
+Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá instalar en su computador la CLI de IBM Cloud junto con algunos plug-ins. Para completar estas instalaciones realice lo siguiente:
+<br />
+
+1. 
 <br />
 
 ## Clonar repositorio :round_pushpin:
@@ -115,7 +120,10 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 ## Crear imagen docker local de la aplicación :computer:
 <br />
 
-## Desplegar aplicación en Kubernetes :rocket:
+## Subir imagen de la aplicación a IBM Cloud Container Registry :outbox_tray:
+<br />
+
+## Desplegar imagen de la aplicación en Kubernetes :rocket:
 <br />
 
 ## Verificar el funcionamiento de la aplicación :heavy_check_mark:
