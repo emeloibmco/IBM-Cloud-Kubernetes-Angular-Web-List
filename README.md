@@ -96,7 +96,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 
    <br />
 
-   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Git.gif"></p>
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Docker.gif"></p>
 
   
 6. Una vez complete la instalación, en un ventana de ```Windows PowerShell``` coloque:
@@ -109,9 +109,12 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
    
    <br />
 
-   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Git.gif"></p>
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Prueba%20Docker.gif"></p>
 
    <br />
+   
+### Instalar IBM Cloud CLI y plug-ins
+<br />
 
 ## Clonar repositorio :round_pushpin:
 <br />
