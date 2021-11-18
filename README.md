@@ -40,7 +40,7 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 
    <br />
 
-> NOTA: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomiendo continuar con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), de tal modo que una vez tenga el clúster listo y los comandos requeridos, pueda avanzar en el ejercicio.
+> NOTA: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomiendo continuar con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), mientras se completa la creación del clúster.
 
 <br />
 
