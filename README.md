@@ -1,5 +1,9 @@
 # IBM Cloud ☁ - Despliegue de aplicación Angular-Web-List en Kubernetes <img width="30" src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/kubernetes.png">
 
+La presente guía se enfoca en el despliegue de una aplicación Angular en un clúster de Kubernetes, en una cuenta IBM Cloud Lite. Adicionalmente, se muestran los pasos necesarios para la creación de la imagen de la aplicación junto con el uso de IBM Cloud Container Registry.
+
+<br />
+
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Crear clúster Kubernetes](#Crear-clúster-Kubernetes-cloud)
@@ -28,10 +32,13 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 <br />
 
 1. Inicie sesión con su usuario y contraseña en el portal de <a href="https://cloud.ibm.com/"> IBM Cloud</a>.
+<br />
 
 2. Una vez se encuentre en el dashboard del portal, de click en el menú de navegación o hamburguesa que se encuentra en la parte superior izquierda (lo puede identificar mediante 4 líneas blancas) y allí seleccione la pestaña ```Kubernetes```.
+<br />
 
 3. Espere unos segundos mientras carga la ventana y luego de click en el botón ```Create cluster +/Crear cluster +```.
+<br />
 
 4. Complete los detalles del plan de la siguiente manera:
 
@@ -39,8 +46,12 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
    * ```Cluster name/Nombre del clúster```: indique un nombre exclusivo para su clúster.
    * ```Resource group/Grupo de recursos```: seleccione el grupo de recursos **Default** que aparece por defecto.
 
+<br />
+
 5. Para finalizar la creación de su clúster de click en el botón ```Create/Crear```. Cuando el clúster tenga como estado ```normal```, podrá utilizarlo.
 
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/CrearCluster.gif"></p>
 
    <br />
@@ -67,17 +78,26 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
    
    Si obtiene como respuesta la versión de git, puede pasar a la siguiente sección sobre la [Instalación de Docker](#Instalación-de-Docker). De lo contrario, continúe con el paso 2.
 
+<br />
+
 2. Para instalar git en su computador, vaya a la página de <a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git"> Instalación de Git</a>. Identifique el sistema operativo en el que desea realizar la instalación y complete el proceso indicado. Para el caso de Windows, de click sobre el enlace <a href="http://git-scm.com/download/win"> http://git-scm.com/download/win</a>, y allí seleccione la opción ```Click here to download manually```. 
 
+<br />
+
 3. Espere mientras se completa la descarga y posteriormente, de click en el instalador. Complete la instalación, dejando todos los campos como aparecen por defecto y al final de click en el botón ```Install```.
+
+<br />
 
 4. Para verificar que la instalación de git se ha completado con éxito, en una ventana de ```Windows PowerShell``` coloque:
 
    ```PowerShell
    git --version   
    ```
+   <br />
    
    Como respuesta debe obtener la versión de git.
+   
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Git.gif"></p>
 
@@ -88,21 +108,28 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 <br />
 
 1. Vaya a la página <a href="https://docs.docker.com/desktop/"> Docker Desktop overview</a> y seleccione las pestaña segpun su sistema operativo. Para el caso de Windows, de click en la sección ```Install Docker Desktop on Windows``` y luego presione el botón ```Docker Desktop for Windows```.
+<br />
 
 2. Espere unos minutos mientras se completa la descarga, y luego de click sobre el instalador.
+<br />
 
 3. Habilite la 2 casillas que aparecen y de click en el botón ```Ok```. Espere unos minutos mientras se completa la instalación.
+<br />
 
 4. Una vez finalice la instalación, en la barra de búsqueda coloque ```Docker Desktop``` y abra la aplicación. Espere unos minutos mientras esta inicia.
+<br />
 
 5. ***OPCIONAL***: Si no tiene una cuenta en <a href="https://hub.docker.com/"> DockerHub</a>, cree una y luego coloque las credenciales de inicio de sesión presionando ```Sign in``` en la parte superior derecha de la ventana de ```Docker Desktop```.
 
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20Docker.gif"></p>
   
    <br />
    
    > NOTA: En caso de presentar problema en Windows sobre *Enable Hyper-V Windows Features*, revise la guía <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v"> Enable Hyper-V using PowerShell</a>
-  
+<br />
+
 6. Una vez complete la instalación, en un ventana de ```Windows PowerShell``` coloque:
 
    ```PowerShell
@@ -110,6 +137,8 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
    ```
    
    Como respuesta debe obtener la versión de docker.
+   
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Prueba%20Docker.gif"></p>
 
@@ -121,11 +150,15 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
 
 ### Instalación de IBM Cloud CLI
 1. Vaya a la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli"> Installing the stand-alone IBM Cloud CLI</a> y visualice la sección ```Installing with an installer```. De click sobre el enlace <a href="https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"> ibm-cloud-cli-releases</a>, identifique el sistema operativo en el que va a instalar la CLI de IBM Cloud y descargue el instalador. 
+<br />
 
 2. Una vez se complete la descarga, de click sobre el instalador y complete el proceso.
+<br />
 
 3. Cuando se termine la instalación, debe reiniciar el equipo para que se conserven los cambios.
-
+   
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/InstalarCLI_IBM.gif"></p>
 
    <br />
@@ -137,7 +170,8 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
    ```
    Como respuesta debe obtener la versión de ibmcloud.
 
-
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaIBM_CLI.gif"></p>
 
    <br />
@@ -149,6 +183,7 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
    ```PowerShell
    curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
    ```
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20kubectl.gif"></p>
 
@@ -162,6 +197,8 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
    
    Como respuesta debe obtener la versión de kubectl.
    
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaVersionKubectl.gif"></p>
 
    <br />
@@ -172,6 +209,7 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
    ```PowerShell
    ibmcloud plugin install container-registry
    ```
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ContainerRegistry.gif"></p>
 
@@ -183,17 +221,22 @@ La aplicación utilizada en esta guía la puede encontrar en este repositorio. P
 <br />
 
 1. En su computador cree una carpeta a la que pueda acceder con facilidad y asígnele un nombre relacionado con la aplicación.
+<br />
 
 2. Abra una ventana de ```Windows PowerShell``` y vaya hasta la carpeta que creó en el ítem 1 con el comando ```cd```.
+<br />
 
 3. Una vez se encuentre dentro de la carpeta creada coloque el siguiente comando para clonar el repositorio:
 
    ```PowerShell
    git clone https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List
    ```
+<br />
 
 4. Acceda a la carpeta ```IBM-Cloud-Kubernetes-Angular-Web-List``` creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
-
+   
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ClonarRepo.gif"></p>
 
    <br />
@@ -213,12 +256,17 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    ```PowerShell
    docker build -t app-listas:v1 .
    ```
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/CrearImagen.gif"></p>
 
 2. Una vez finalice el proceso, verifique en ```Docker Desktop``` que la imagen que acaba de crear aparece en la lista de imágenes.
-
+   
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ImagenesDocker.PNG"></p>
+   
+   <br />
    
 3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y \<nombre_imagen:tag>).
   
@@ -245,12 +293,15 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    ```PowerShell
    localhost:8085
    ```
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/RunImage1.gif"></p>
    
    > Nota: En la variable port puede colocar cualquier valor, por ejemplo 8085. En la variable port_dockerfile por defecto coloque 8080, ya que es el puerto establecido para este ejercicio.
+<br />
 
 4. Vaya a ```Docker Desktop``` y en la sección ```Containers/Apps``` observe que la imagen se encuentra en funcionamiento. De click en la opción ```Open in browser``` para abrir la aplicación. Luego de click en la opción ```Stop```.
+<br />
 
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/RunImage2.gif"></p>
    
@@ -268,9 +319,14 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    
    Se le pedirá que coloque un código de acceso el cual puede obtener presionando ```y``` para abrir la URL de acceso, o en el portal de IBM Cloud ➡ de click sobre su perfil ➡ ```Login to CLI and API```.
    
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cli-codigo.gif"></p>
    
+   <br />
+   
 2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+<br />
 
 3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
 
@@ -285,14 +341,19 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    ```
    
    >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información. Recuerde que s su clúster está en ```Milán``` la región es ```eu-deu```, si su clúster está en ```Dallas``` la región es ```us-suth```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>. Por otro lado, no olvide que el grupo de recursos es el mismo en el que desplegó su clúster.
-
+   
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ibmcloud-login.gif"></p>
-
+   
+   <br />
+   
 4. Registre el daemon de Docker local en *IBM Cloud Container Registry* con el comando:
 
    ```PowerShell
    ibmcloud cr login
    ```
+<br />
 
 5. Cree un espacio de nombres (*namespace*) dentro de *IBM Cloud Container Registry* para su imagen. Para ello ejecute el siguiente comando:
 
@@ -305,10 +366,12 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    ```PowerShell
    ibmcloud cr namespace-add app-listas-ns
    ```
+   <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cr-login.gif"></p>
    
    >**Nota**: Reemplace \<namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación. 
+<br />
 
 6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*) creado en el ítem anterior. Coloque el siguiente comando:
 
@@ -316,7 +379,14 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    docker tag <nombre_imagen:tag> de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
    
+   Ejemplo:
+   
+   ```PowerShell
+   docker tag app-listas:v1 de.icr.io/app-listas-ns/app-listas:v1
+   ```
+   
    >**Nota**: En el nombre de dominio ```de.icr.io```, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster (en este caso ```eu-de``` o ```eu-central```) y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions_local"> regiones </a>.
+<br />
 
 7. Envíe la imagen a ```IBM Cloud Container Registry``` mediante el comando:
 
@@ -324,10 +394,21 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    docker push de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
    
+   Ejemplo:
+   
+   ```PowerShell
+   docker push de.icr.io/app-listas-ns/app-listas:v1
+   ```
+   
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cr-imagen.gif"></p>
-
+   
+   <br />
+   
 8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso. Para encontrar el Container Registry, de click en el menú de navegación o hamburguesa que se encuentra en la parte superior izquierda (lo puede identificar mediante 4 líneas blancas) y allí seleccione la pestaña ```Container Registry```. Asegúrese de tener selecciona la ubicación correcta. Para el caso de ```de.icr.io``` seleccione Frankfurt.
-
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Cr.gif"></p>
    
 <br />
@@ -341,27 +422,54 @@ Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice l
    ```PowerShell
    ibmcloud cs clusters
    ```
+<br />
 
 2. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando kubectl de la siguiente manera:
 
    ```PowerShell
    ibmcloud ks cluster config --cluster <cluster_name>
    ```
+   
+   Ejemplo:
+   
+   ```PowerShell
+   ibmcloud ks cluster config --cluster mycluster-free
+   ```
+   
+<br />
 
 3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar \<deployment> con un nombre para su servicio de despliegue):  
 
    ```PowerShell
    kubectl create deployment <deployment> --image=de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
-  
+   
+   Ejemplo:
+   
+   ```PowerShell
+   kubectl create deployment app-listas-deployment --image=de.icr.io/app-listas-ns/app-listas:v1
+   ```
+   
+ <br />
+ 
 4. A continuación, debe exponer su servicio en Kubernetes, para ello utilice el siguiente comando:
 
    ```PowerShell
    kubectl expose deployment/<deployment> --type=NodePort --port=8080
    ```
    
+   Ejemplo:
+   
+   ```PowerShell
+   kubectl expose deployment/app-listas-deployment --type=NodePort --port=8080
+   ```
+   
+ <br />
+ 
 5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
-
+   
+   <br />
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Desplegar%20app.gif"></p>
    
 <br />
@@ -369,18 +477,46 @@ Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice l
 ## Verificar el funcionamiento de la aplicación :heavy_check_mark:
 Para verificar el correcto funcionamiento de su aplicación en Kubernetes realice lo siguiente:
 
-1. Su aplicación funcionará si coloca en el navegador **IP_Publica:port**. Para obtener la IP Pública coloque el comando:
+1. Obtenga la IP Pública. Para ello coloque el comando:
 
    ```PowerShell
-   ibmcloud ks workers --cluster <ID_Cluster>
+   ibmcloud ks workers --cluster <Cluster_Name>
    ```
+   
+   Ejemplo:
+   
+   ```PowerShell
+   ibmcloud ks workers --cluster mycluster-free
+   ```
+   
+<br />
 
-   Para obtener el puerto use el comando:
+2. Obtenga el puerto. Para ello, use el comando:
 
    ```PowerShell
    kubectl get service <deployment>
    ```
    
+   Ejemplo:
+   
+   ```PowerShell
+   kubectl get service app-listas-deployment
+   ```
+   
+<br />
+
+3. En el navegador coloque:
+
+   ```PowerShell
+   ip_publica:puerto
+   ```
+   
+   Ejemplo:
+   
+   ```PowerShell
+   169.51.203.28:31232
+   ```
+
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaAppKubernetes.gif"></p>
 
 <br />
