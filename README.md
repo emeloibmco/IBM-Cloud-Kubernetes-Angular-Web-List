@@ -111,8 +111,27 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá instalar en su computador la CLI de IBM Cloud junto con algunos plug-ins. Para completar estas instalaciones realice lo siguiente:
 <br />
 
-1. Vaya a la página
-<br />
+1. Vaya a la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli"> Installing the stand-alone IBM Cloud CLI</a> y visualice la sección ```Installing with an installer```. De click sobre el enlace <a href="https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"> ibm-cloud-cli-releases</a> y allí identifique el sistema operativo en el que va a instalar la CLI de IBM Cloud y descargue el instalador. 
+
+2. Una vez se complete la descarga, de click sobre el instalador y complete el proceso.
+
+3. Cuando se termine la instalación, debe reiniciar el equipo para que se conserven los cambios.
+
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/InstalarCLI_IBM.gif"></p>
+
+   <br />
+
+4. Luego de reiniciar el equipo, abra una ventana de ```Windows PowerShell``` y coloque el comando:
+
+   ```PowerShell
+   ibmcloud --version
+   ```
+   Como respuesta debe obtener la versión de ibmcloud.
+
+
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaIBM_CLI.gif"></p>
+
+   <br />
 
 ## Clonar repositorio :round_pushpin:
 <br />
@@ -121,7 +140,7 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
 Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile* utilizado para crear la imagen de la aplicación. Realice los siguientes pasos:
 <br />
 
-1. En la ventaja de *Windows PowerShell* y asegurándose que se encuentra dentro de la carpeta que contiene los archivos de la aplicación y el Dockerfile, coloque el siguiente comando para crear la imagen de su aplicación:
+1. En la ventaja de ```Windows PowerShell``` y asegurándose que se encuentra dentro de la carpeta que contiene los archivos de la aplicación y el Dockerfile, coloque el siguiente comando para crear la imagen de su aplicación:
 
    ```PowerShell
    docker build -t <nombre_imagen:tag> .
