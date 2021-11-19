@@ -111,6 +111,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá instalar en su computador la CLI de IBM Cloud junto con algunos plug-ins. Para completar estas instalaciones realice lo siguiente:
 <br />
 
+### Instalación de IBM Cloud CLI
 1. Vaya a la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli"> Installing the stand-alone IBM Cloud CLI</a> y visualice la sección ```Installing with an installer```. De click sobre el enlace <a href="https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"> ibm-cloud-cli-releases</a>, identifique el sistema operativo en el que va a instalar la CLI de IBM Cloud y descargue el instalador. 
 
 2. Una vez se complete la descarga, de click sobre el instalador y complete el proceso.
@@ -132,6 +133,34 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaIBM_CLI.gif"></p>
 
    <br />
+
+
+### Instalación de plug-in kubectl
+1. En la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually"> Installing the tools and plug-ins manually</a> visualice la sección ```Installing the Kubernetes command line tool```. Identifique el sistema operativo y use el comando respectivo para instalar el plug-in ```kubectl```. Para el caso de Windows, abra una venatna del ```Símbolo del sistema (cmd)``` y allí coloque:
+
+   ```PowerShell
+   curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+   ```
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20kubectl.gif"></p>
+
+   <br />
+
+2. Espere unos minutos mientras se completa la instalación y luego coloque el comando:
+
+   ```PowerShell
+   kubectl version 
+   ```
+   
+   Como respuesta debe obtener la versión de kubectl.
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaVersionKubectl.gif"></p>
+
+   <br />
+
+### Instalación de plug-in IBM Cloud Container Registry
+<br />
+
 
 ## Clonar repositorio :round_pushpin:
 <br />
