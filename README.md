@@ -205,9 +205,13 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    ```PowerShell
    docker build -t <nombre_imagen:tag> .
    ```
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/CrearImagen.gif"></p>
 
-2. Una vez finalice el proceso, verifique en *Docker Desktop* que la imagen que acaba de crear aparece en la lista de imágenes.
+2. Una vez finalice el proceso, verifique en ```Docker Desktop``` que la imagen que acaba de crear aparece en la lista de imágenes.
 
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ImagenesDocker.PNG"></p>
+   
 3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y nombre_imagen:tag):
   
    ```PowerShell
@@ -219,9 +223,13 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    ```PowerShell
    localhost:port
    ```
-
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/RunImage1.gif"></p>
+   
 > Nota: En la variable port puede colocar cualquier valor, por ejemplo 8085. En la variable port_dockerfile por defecto coloque 8080, ya que es el puerto establecido para este ejercicio.
 
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/RunImage2.gif"></p>
+   
 <br />
 
 ## Subir imagen de la aplicación a IBM Cloud Container Registry :outbox_tray:
