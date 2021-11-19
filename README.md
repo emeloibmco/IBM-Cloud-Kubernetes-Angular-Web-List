@@ -467,13 +467,17 @@ Para desplegar la imagen de la aplicación en Kubernetes, realice lo siguiente:
    kubectl expose deployment/app-listas-deployment --type=NodePort --port=8080
    ```
    
- <br />
- 
-5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
-   
    <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Desplegar%20app.gif"></p>
+   
+ <br />
+ 
+5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster. Para ello, de click en el botón ```Kubernetes dashboard``` y allí identifique los componentes.
+   
+   <br />
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/VerKubernetes.gif"></p>
    
 <br />
 
