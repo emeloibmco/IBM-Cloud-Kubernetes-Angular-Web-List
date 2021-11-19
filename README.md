@@ -142,7 +142,7 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
 
 
 ### Instalación de plug-in kubectl
-1. En la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually"> Installing the tools and plug-ins manually</a> visualice la sección ```Installing the Kubernetes command line tool```. Identifique el sistema operativo y use el comando respectivo para instalar el plug-in ```kubectl```. Para el caso de Windows, abra una venatna del ```Símbolo del sistema (cmd)``` y allí coloque:
+1. En la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually"> Installing the tools and plug-ins manually</a> visualice la sección ```Installing the Kubernetes command line tool```. Identifique el sistema operativo y use el comando respectivo para instalar el plug-in ```kubectl```. Para el caso de Windows, abra una ventana del ```Símbolo del sistema (cmd)``` y allí coloque:
 
    ```PowerShell
    curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
@@ -165,7 +165,7 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
    <br />
 
 ### Instalación de plug-in IBM Cloud Container Registry
-1. En la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually"> Installing the tools and plug-ins manually</a> visualice la sección ```Installing IBM Cloud Container Registry CLI plug-in```. Para el caso de Windows, en una venatna de ```Windows PowerShell``` coloque:
+1. En la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually"> Installing the tools and plug-ins manually</a> visualice la sección ```Installing IBM Cloud Container Registry CLI plug-in```. Para el caso de Windows, en una ventana de ```Windows PowerShell``` coloque:
 
    ```PowerShell
    ibmcloud plugin install container-registry
@@ -177,6 +177,20 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
 
 
 ## Clonar repositorio :round_pushpin:
+La aplicación utilizada en esta guía la puede encontrar en este repositorio. Para clonar el repositorio en su computador, realice los siguientes pasos:
+<br />
+
+1. En su computador cree una carpeta a la que pueda acceder con facilidad y asígnele un nombre relacionado con la aplicación.
+
+2. Abra una ventana de ```Windows PowerShell``` y vaya hasta la carpeta que creó en el ítem 1 con el comando ```cd```.
+
+3. Una vez se encuentre dentro de la carpeta creada coloque el siguiente comando para clonar el repositorio:
+
+   ```PowerShell
+   git clone https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List
+   ```
+   
+4. Acceda a la carpeta ```IBM-Cloud-Kubernetes-Angular-Web-List``` creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
 <br />
 
 ## Crear imagen docker local de la aplicación :computer:
