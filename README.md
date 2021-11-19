@@ -111,7 +111,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá instalar en su computador la CLI de IBM Cloud junto con algunos plug-ins. Para completar estas instalaciones realice lo siguiente:
 <br />
 
-1. Vaya a la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli"> Installing the stand-alone IBM Cloud CLI</a> y visualice la sección ```Installing with an installer```. De click sobre el enlace <a href="https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"> ibm-cloud-cli-releases</a> y allí identifique el sistema operativo en el que va a instalar la CLI de IBM Cloud y descargue el instalador. 
+1. Vaya a la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli"> Installing the stand-alone IBM Cloud CLI</a> y visualice la sección ```Installing with an installer```. De click sobre el enlace <a href="https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"> ibm-cloud-cli-releases</a>, identifique el sistema operativo en el que va a instalar la CLI de IBM Cloud y descargue el instalador. 
 
 2. Una vez se complete la descarga, de click sobre el instalador y complete el proceso.
 
