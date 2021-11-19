@@ -206,6 +206,12 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    docker build -t <nombre_imagen:tag> .
    ```
    
+   Ejemplo 
+
+   ```PowerShell
+   docker build -t app-listas:v1 .
+   ```
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/CrearImagen.gif"></p>
 
 2. Una vez finalice el proceso, verifique en ```Docker Desktop``` que la imagen que acaba de crear aparece en la lista de imágenes.
@@ -218,15 +224,29 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    docker run --publish port:port_dockerfile <nombre_imagen:tag>
    ```
    
-   y coloque en el navegador:
+   Ejemplo
+   
+   ```PowerShell
+   docker run --publish 8085:8080 app-listas:v1
+   ```
+   
+   Para visualizar la aplicación, coloque en el navegador:
  
    ```PowerShell
    localhost:port
    ```
    
+   Ejemplo
+
+   ```PowerShell
+   localhost:8085
+   ```
+   
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/RunImage1.gif"></p>
    
-> Nota: En la variable port puede colocar cualquier valor, por ejemplo 8085. En la variable port_dockerfile por defecto coloque 8080, ya que es el puerto establecido para este ejercicio.
+   > Nota: En la variable port puede colocar cualquier valor, por ejemplo 8085. En la variable port_dockerfile por defecto coloque 8080, ya que es el puerto establecido para este ejercicio.
+
+4. Vaya a ```Docker Desktop``` y en la sección ```Containers/Apps``` observe que la imagen se encuentra en funcionamiento. De click en la opción ```Open in browser``` para abrir la aplicación. Luego de click en la opción ```Stop```.
 
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/RunImage2.gif"></p>
    
