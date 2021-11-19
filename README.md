@@ -406,7 +406,10 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    
    <br />
    
-8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso. Para encontrar el Container Registry, de click en el menú de navegación o hamburguesa que se encuentra en la parte superior izquierda (lo puede identificar mediante 4 líneas blancas) y allí seleccione la pestaña ```Container Registry```. Asegúrese de tener selecciona la ubicación correcta. Para el caso de ```de.icr.io``` seleccione Frankfurt.
+8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso. 
+   
+   Para encontrar el Container Registry, de click en el menú de navegación o hamburguesa que se encuentra en la parte superior izquierda (lo puede identificar mediante 4 líneas blancas) y allí seleccione la pestaña ```Container Registry```. Asegúrese de tener seleccionada la ubicación correcta. Para el caso de ```de.icr.io``` seleccione Frankfurt.
+   
    <br />
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Cr.gif"></p>
