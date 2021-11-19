@@ -311,7 +311,7 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
 Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
 <br />
 
-1. En la ventana de ```Windows PowerShell```* y sin salir en ningún momento de la carpeta que contiene los archivos, inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+1. En la misma ventana de ```Windows PowerShell``` inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
 
    ```PowerShell
    ibmcloud login --sso
