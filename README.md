@@ -67,7 +67,7 @@ Para desplegar la aplicación propuesta en un clúster de Kubernetes en IBM Clou
 <br />
 
 ## Instalación de git
-Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicación, es necesario contar con el comando git. Complete los siguientes pasos para realizar realizar la instalación:
+Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicación, es necesario contar con el comando git. Complete los siguientes pasos para realizar la instalación:
 <br />
 
 1. Verifique si tiene instalado el comando. Para ello, abra una ventana de ```Windows PowerShell``` y allí coloque:
