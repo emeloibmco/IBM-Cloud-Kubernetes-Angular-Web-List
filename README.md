@@ -224,7 +224,7 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    docker run --publish port:port_dockerfile <nombre_imagen:tag>
    ```
    
-   Ejemplo
+   Ejemplo:
    
    ```PowerShell
    docker run --publish 8085:8080 app-listas:v1
@@ -238,7 +238,7 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    localhost:port
    ```
       
-   Ejemplo
+   Ejemplo:
 
    ```PowerShell
    localhost:8085
