@@ -58,7 +58,7 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 
 > NOTA 1: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomienda continuar con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), mientras se completa la creación del clúster.
 
-> NOTA 2: Identifique la zona en la cual se desplegó su clúster, para de este modo tener en cuenta la región en donde desplegará la aplicación. Si su clúster está en ```Milán``` la región es ```eu-deu```, si su clúster está en ```Dallas``` la región es ```us-south```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>.
+> NOTA 2: Identifique la zona en la cual se desplegó su clúster, para de este modo tener en cuenta la región en donde desplegará la aplicación. Si su clúster está en ```Milán``` la región es ```eu-de```, si su clúster está en ```Dallas``` la región es ```us-south```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>.
 
 <br />
 
