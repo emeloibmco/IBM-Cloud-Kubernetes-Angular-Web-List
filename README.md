@@ -455,7 +455,7 @@ Para desplegar la imagen de la aplicación en Kubernetes, realice lo siguiente:
    
  <br />
  
-4. A continuación, debe exponer su servicio en Kubernetes, para ello utilice el siguiente comando:
+4. A continuación, debe exponer su servicio en Kubernetes. Para ello utilice el siguiente comando:
 
    ```PowerShell
    kubectl expose deployment/<deployment> --type=NodePort --port=8080
