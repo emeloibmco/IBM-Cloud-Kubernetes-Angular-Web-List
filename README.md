@@ -163,7 +163,15 @@ Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá
 
 
 ## Clonar repositorio :round_pushpin:
-<br />
+1. En la página <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually"> Installing the tools and plug-ins manually</a> visualice la sección ```Installing IBM Cloud Container Registry CLI plug-in```. Para el caso de Windows, en una ventana de ```Windows PowerShell``` coloque:
+
+   ```PowerShell
+   ibmcloud plugin install container-registry
+   ```
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Instalar%20kubectl.gif"></p>
+
+   <br />
 
 ## Crear imagen docker local de la aplicación :computer:
 Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile* utilizado para crear la imagen de la aplicación. Realice los siguientes pasos:
