@@ -362,6 +362,8 @@ Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice l
    
 5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
 
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Desplegar%20app.gif"></p>
+   
 <br />
 
 ## Verificar el funcionamiento de la aplicación :heavy_check_mark:
@@ -378,6 +380,8 @@ Para verificar el correcto funcionamiento de su aplicación en Kubernetes realic
    ```PowerShell
    kubectl get service <deployment>
    ```
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaKubernetes.gif"></p>
 
 <br />
 
