@@ -323,8 +323,13 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    ```PowerShell
    docker push de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cr-imagen.gif"></p>
 
 8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
+
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Cr.gif"></p>
+   
 <br />
 
 ## Desplegar imagen de la aplicación en Kubernetes :rocket:
