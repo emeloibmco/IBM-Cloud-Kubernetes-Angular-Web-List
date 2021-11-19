@@ -88,7 +88,7 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
 
 <br />
 
-4. Para verificar que la instalación de git se ha completado con éxito, en una ventana de ```Windows PowerShell``` coloque:
+4. Para verificar que la instalación de git se ha completado con éxito. Para ello, en una ventana de ```Windows PowerShell``` coloque:
 
    ```PowerShell
    git --version   
