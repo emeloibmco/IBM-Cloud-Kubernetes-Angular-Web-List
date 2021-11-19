@@ -417,10 +417,10 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
 <br />
 
 ## Desplegar imagen de la aplicación en Kubernetes :rocket:
-Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice lo siguiente:
+Para desplegar la imagen de la aplicación en Kubernetes, realice lo siguiente:
 <br />
 
-1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
+1. En la ventana de ```Windows PowerShell``` en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
 
    ```PowerShell
    ibmcloud cs clusters
