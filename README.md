@@ -300,6 +300,14 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    ibmcloud cr namespace-add <namespace>
    ```
    
+   Ejemplo:
+   
+   ```PowerShell
+   ibmcloud cr namespace-add app-listas-ns
+   ```
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cr-login.gif"></p>
+   
    >**Nota**: Reemplace \<namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación. 
 
 6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*) creado en el ítem anterior. Coloque el siguiente comando:
