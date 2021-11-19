@@ -505,7 +505,7 @@ Para verificar el correcto funcionamiento de su aplicación en Kubernetes realic
    
 <br />
 
-3. En el navegador coloque:
+3. Para visualizar y probar la aplicación, en el navegador coloque:
 
    ```PowerShell
    ip_publica:puerto
