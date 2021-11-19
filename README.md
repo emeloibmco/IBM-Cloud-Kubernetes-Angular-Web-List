@@ -111,7 +111,7 @@ Para crear la imágen docker local de la aplicación y probarla, es necesario qu
 Para desplegar la aplicación en el clúster de Kubernetes en IBM Cloud, deberá instalar en su computador la CLI de IBM Cloud junto con algunos plug-ins. Para completar estas instalaciones realice lo siguiente:
 <br />
 
-1. 
+1. Vaya a la página
 <br />
 
 ## Clonar repositorio :round_pushpin:
