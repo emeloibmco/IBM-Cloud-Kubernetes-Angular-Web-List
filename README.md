@@ -316,7 +316,7 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    docker tag <nombre_imagen:tag> de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
    
-   >**Nota**: En el nombre de dominio **de.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
+   >**Nota**: En el nombre de dominio ```de.icr.io```, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster (en este caso ```eu-de``` o ```eu-central```) y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions_local"> regiones </a>.
 
 7. Envíe la imagen a ```IBM Cloud Container Registry``` mediante el comando:
 
