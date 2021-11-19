@@ -525,6 +525,10 @@ Para verificar el correcto funcionamiento de su aplicación en Kubernetes realic
 <br />
 
 ## Referencias :mag:
+* <a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git">Instalación de Git</a>.
+* <a href="https://docs.docker.com/desktop/">Docker Desktop Overview</a>.
+* <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli">Instalación de IBM Cloud CLI</a>.
+* <a href="https://cloud.ibm.com/docs/cli?topic=cli-install-devtools-manually">Instalación de Plug-ins</a>.
 <br />
 
 ## Autores :black_nib:
