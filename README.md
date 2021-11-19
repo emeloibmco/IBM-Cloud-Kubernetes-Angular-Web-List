@@ -340,7 +340,7 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    ibmcloud target -r eu-de -g Default
    ```
    
-   >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información. Recuerde que s su clúster está en ```Milán``` la región es ```eu-deu```, si su clúster está en ```Dallas``` la región es ```us-suth```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>. Por otro lado, no olvide que el grupo de recursos es el mismo en el que desplegó su clúster.
+   >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información. Recuerde que si su clúster está en ```Milán``` la región es ```eu-de```, si su clúster está en ```Dallas``` la región es ```us-south```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>. Por otro lado, no olvide que el grupo de recursos es el mismo en el que desplegó su clúster.
    
    <br />
    
