@@ -381,7 +381,7 @@ Para verificar el correcto funcionamiento de su aplicación en Kubernetes realic
    kubectl get service <deployment>
    ```
    
-   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaKubernetes.gif"></p>
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/PruebaAppKubernetes.gif"></p>
 
 <br />
 
