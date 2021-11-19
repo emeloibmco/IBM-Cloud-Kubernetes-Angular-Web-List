@@ -107,7 +107,7 @@ Teniendo en cuenta que debe clonar el presente repositorio para usar la aplicaci
 Para crear la imágen docker local de la aplicación y probarla, es necesario que instale *Docker Desktop*. Para ello, complete los siguientes pasos:
 <br />
 
-1. Vaya a la página <a href="https://docs.docker.com/desktop/"> Docker Desktop overview</a> y seleccione la pestaña segpun su sistema operativo. Para el caso de Windows, de click en la sección ```Install Docker Desktop on Windows``` y luego presione el botón ```Docker Desktop for Windows```.
+1. Vaya a la página <a href="https://docs.docker.com/desktop/"> Docker Desktop overview</a> y seleccione la pestaña según su sistema operativo. Para el caso de Windows, de click en la sección ```Install Docker Desktop on Windows``` y luego presione el botón ```Docker Desktop for Windows```.
 <br />
 
 2. Espere unos minutos mientras se completa la descarga, y luego de click sobre el instalador.
