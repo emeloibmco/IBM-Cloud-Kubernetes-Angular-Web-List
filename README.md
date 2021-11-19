@@ -230,13 +230,14 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    docker run --publish 8085:8080 app-listas:v1
    ```
    
+   <br />
+   
    Para visualizar la aplicación, coloque en el navegador:
  
    ```PowerShell
    localhost:port
    ```
-   <br />
-   
+      
    Ejemplo
 
    ```PowerShell
