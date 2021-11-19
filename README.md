@@ -39,7 +39,7 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
    * ```Cluster name/Nombre del clúster```: indique un nombre exclusivo para su clúster.
    * ```Resource group/Grupo de recursos```: seleccione el grupo de recursos **Default** que aparece por defecto.
 
-5. Para finalizar la creación de su clúster de click en el botón ```Create/Crear```. Cuando el clúster tengo como estado ```normal```, podrá utilizarlo.
+5. Para finalizar la creación de su clúster de click en el botón ```Create/Crear```. Cuando el clúster tenga como estado ```normal```, podrá utilizarlo.
 
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/CrearCluster.gif"></p>
 
