@@ -305,7 +305,7 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
 6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*) creado en el ítem anterior. Coloque el siguiente comando:
 
    ```PowerShell
-   docker tag <nombre_imagen:tag> us.icr.io/<namespace>/<nombre_imagen:tag>
+   docker tag <nombre_imagen:tag> de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
    
    >**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
@@ -313,7 +313,7 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
 7. Envíe la imagen a *IBM Cloud Container Registry* mediante el comando:
 
    ```PowerShell
-   docker push us.icr.io/<namespace>/<nombre_imagen:tag>
+   docker push de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
 
 8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
@@ -338,7 +338,7 @@ Para desplegar la imagen del frontend de la aplicación en Kubernetes, realice l
 3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar \<deployment> con un nombre para su servicio de despliegue):  
 
    ```PowerShell
-   kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
+   kubectl create deployment <deployment> --image=de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
   
 4. A continuación, debe exponer su servicio en Kubernetes, para ello utilice el siguiente comando:
