@@ -218,7 +218,7 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
 
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ImagenesDocker.PNG"></p>
    
-3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y nombre_imagen:tag):
+3. Si desea probar el funcionamiento de la imagen de forma local, ejecute el siguiente comando (cambie los valores de port, port_dockerfile y \<nombre_imagen:tag>).
   
    ```PowerShell
    docker run --publish port:port_dockerfile <nombre_imagen:tag>
@@ -235,6 +235,7 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
    ```PowerShell
    localhost:port
    ```
+   <br />
    
    Ejemplo
 
