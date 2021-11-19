@@ -316,7 +316,7 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    docker tag <nombre_imagen:tag> de.icr.io/<namespace>/<nombre_imagen:tag>
    ```
    
-   >**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
+   >**Nota**: En el nombre de dominio **de.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
 
 7. Envíe la imagen a ```IBM Cloud Container Registry``` mediante el comando:
 
@@ -326,7 +326,7 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cr-imagen.gif"></p>
 
-8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso. Para encontrar el Container Registry, de click en el menú de navegación o hamburguesa que se encuentra en la parte superior izquierda (lo puede identificar mediante 4 líneas blancas) y allí seleccione la pestaña ```Container Registry```.
+8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso. Para encontrar el Container Registry, de click en el menú de navegación o hamburguesa que se encuentra en la parte superior izquierda (lo puede identificar mediante 4 líneas blancas) y allí seleccione la pestaña ```Container Registry```. Asegúrese de tener selecciona la ubicación correcta. Para el caso de ```de.icr.io``` seleccione Frankfurt.
 
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/Cr.gif"></p>
    
