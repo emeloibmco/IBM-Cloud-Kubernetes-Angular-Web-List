@@ -1,6 +1,6 @@
 # IBM Cloud ☁ - Despliegue de aplicación Angular-Web-List en Kubernetes <img width="30" src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/kubernetes.png">
 
-En la presente guía se muestran los pasos requeridos para completar el despliegue de una aplicación Angular en un clúster de Kubernetes. Adicionalmente, se indica como crear de la imagen Docker de la aplicación, junto con el uso de IBM Cloud Container Registry.
+En la presente guía se muestran los pasos requeridos para completar el despliegue de una aplicación Angular en un clúster de Kubernetes. Adicionalmente, se indica como crear la imagen Docker de la aplicación, junto con el uso de IBM Cloud Container Registry.
 
 <br />
 
