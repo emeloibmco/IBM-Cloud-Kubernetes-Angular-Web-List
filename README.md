@@ -189,7 +189,11 @@ La aplicación utilizada en esta guía la puede encontrar en este repositorio. P
    ```PowerShell
    git clone https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List
    ```
-   
+
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ClonarRepo.gif"></p>
+
+   <br />
+
 4. Acceda a la carpeta ```IBM-Cloud-Kubernetes-Angular-Web-List``` creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
 <br />
 
