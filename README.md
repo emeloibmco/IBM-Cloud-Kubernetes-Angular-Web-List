@@ -45,7 +45,9 @@ Para crear un clúster de Kubernetes y desplegar la aplicación propuesta en el 
 
    <br />
 
-> NOTA: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomiendo continuar con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), mientras se completa la creación del clúster.
+> NOTA 1: Después de dar click en el botón crear, el proceso de despliegue del clúster puede tomar entre 20 y 30 minutos. Por lo tanto, se recomiendo continuar con la siguiente sección sobre como [Instalar herramientas y comandos necesarios](#Instalar-herramientas-y-comandos-necesarios-gear), mientras se completa la creación del clúster.
+
+> NOTA 2: Identifique la zona en la cual se desplegó su clúster, para de este modo tener en cuenta la región en donde desplegará la aplicación. Si su clúster está en ```Milán``` la región es ```eu-deu```, si su clúster está en ```Dallas``` la región es ```us-aouth```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>.
 
 <br />
 
@@ -258,12 +260,16 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
 Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
 <br />
 
-1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos, inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+1. En la ventana de ```Windows PowerShell```* y sin salir en ningún momento de la carpeta que contiene los archivos, inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
 
    ```PowerShell
    ibmcloud login --sso
    ```
-
+   
+   Se le pedirá que coloque un código de acceso el cual puede obtener presionando ```y``` para abrir la URL de acceso, o en el portal de IBM Cloud ➡ de click sobre su perfil ➡ ```Login to CLI and API```.
+   
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/cli-codigo.gif"></p>
+   
 2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
 
 3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
@@ -271,7 +277,16 @@ Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguient
    ```PowerShell
    ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
    ```
-   >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información.
+   
+   Ejemplo:
+   
+   ```PowerShell
+   ibmcloud target -r eu-de -g Default
+   ```
+   
+   >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información. Recuerde que s su clúster está en ```Milán``` la región es ```eu-deu```, si su clúster está en ```Dallas``` la región es ```us-suth```, si su clúster está en ```Washington``` la región es ```us-east```, entre otros. Puede encontrar más información sobre las regiones en <a href="https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones"> Locations IBM Cloud</a>. Por otro lado, no olvide que el grupo de recursos es el mismo en el que desplegó su clúster.
+
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Cloud-Kubernetes-Angular-Web-List/blob/main/Images/ibmcloud-login.gif"></p>
 
 4. Registre el daemon de Docker local en *IBM Cloud Container Registry* con el comando:
 
